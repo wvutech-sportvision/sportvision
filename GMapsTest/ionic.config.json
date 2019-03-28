@@ -1,0 +1,7 @@
+{
+  "name": "GMapsTest",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
