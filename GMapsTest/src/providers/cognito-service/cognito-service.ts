@@ -54,5 +54,44 @@ export class CognitoServiceProvider {
         }
       });
     });
+} // End of authenticate function (LOG IN)
+
+signUp(email, password) {
+  return new Promise((resolved, reject) => {
+    const userPool = new AWSCognito.CognitoUserPool(this._POOL_DATA);
+
+    let userAttribute = [];
+    userAttribute.push(
+      new AWSCognito.CognitoUserAttribute({ Name: "email", Value: email })
+    );
+
+    userPool.signUp(email, password, userAttribute, null, function(err, result) {
+      if (err) {
+        reject(err);
+      } else {
+        resolved(result);
+      }
+    });
+  });
 }
+
+confirmUser(verificationCode, userName) {
+  return new Promise((resolved, reject) => {
+    const userPool = new AWSCognito.CognitoUserPool(this._POOL_DATA);
+
+    const cognitoUser = new AWSCognito.CognitoUser({
+      Username: userName,
+      Pool: userPool
+    });
+
+    cognitoUser.confirmRegistration(verificationCode, true, function(err, result) {
+      if (err) {
+        reject(err);
+      } else {
+        resolved(result);
+      }
+    });
+  });
+}
+
 }

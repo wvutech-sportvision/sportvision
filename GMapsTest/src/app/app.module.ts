@@ -16,6 +16,7 @@ import { MapPage } from '../pages/map/map';
 import { LoginPage } from '../pages/login/login';
 import { CognitoServiceProvider } from '../providers/cognito-service/cognito-service';
 import { SystemVariableProvider } from '../providers/system-variable/system-variable';
+import { SignUpPage } from '../pages/sign-up/sign-up';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SystemVariableProvider } from '../providers/system-variable/system-vari
     GoogleMapComponent,
     FriendsPage,
     MapPage,
+    SignUpPage,
   ],
   imports: [
     BrowserModule,
@@ -37,10 +39,12 @@ import { SystemVariableProvider } from '../providers/system-variable/system-vari
     HomePage,
     FriendsPage,
     MapPage,
+    SignUpPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CognitoServiceProvider,
     SystemVariableProvider
