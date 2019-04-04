@@ -16,6 +16,8 @@ import { MapPage } from '../pages/map/map';
 import { LoginPage } from '../pages/login/login';
 import { CognitoServiceProvider } from '../providers/cognito-service/cognito-service';
 import { SystemVariableProvider } from '../providers/system-variable/system-variable';
+import { MatchmakingPage } from '../pages/matchmaking/matchmaking';
+import { ProfilePage } from '../pages/profile/profile';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { SystemVariableProvider } from '../providers/system-variable/system-vari
     GoogleMapComponent,
     FriendsPage,
     MapPage,
+    MatchmakingPage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,8 @@ import { SystemVariableProvider } from '../providers/system-variable/system-vari
     HomePage,
     FriendsPage,
     MapPage,
+    ProfilePage,
+    MatchmakingPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,56 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <form #formCtrl="ngForm">
+  <div align="center" *ngIf="formCtrl.form.valid">
+    <h1>Profile</h1>
+    <img class="profile-image" src="assets/imgs/logo.png">
+      <h4>{{person.name}}, {{person.position}}</h4>
+      <h5>{{age}} years old</h5>
+      <h6>{{person.aboutMe}}</h6>
+  </div>
+
+  <ion-list >
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="person.name" name="name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Favorite Position</ion-label>
+      <ion-select [(ngModel)]="person.position" name="position" required>
+        <ion-option value="Shooting Guard">Shooting Guard</ion-option>
+        <ion-option value="Point Guard">Point Guard</ion-option>
+        <ion-option value="Center">Center</ion-option>
+        <ion-option value="Power Forward">Power Forward</ion-option>
+        <ion-option value="Small Forward">Small Forward</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Birth Date</ion-label>
+        <ion-datetime required name="birthdate" displayFormat="DD MMM YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="dob" [ngModelOptions]="{standalone:true}"></ion-datetime>
+    </ion-item>
+    
+    <ion-item>
+        <ion-label floating>About Me</ion-label>
+        <ion-input type="text" [(ngModel)]="person.aboutMe" name="aboutMe" required></ion-input>
+    </ion-item>
+  </ion-list>
+  <hr>
+  <button color="secondary" [disabled]="!formCtrl.form.valid" ion-button block (click)="save()">Save</button>
+  <button color="danger" ion-button block (click)="reset()">Reset</button>
+</form>
+</ion-content>
