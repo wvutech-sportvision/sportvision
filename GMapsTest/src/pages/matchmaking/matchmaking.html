@@ -8,9 +8,6 @@
 
   <ion-navbar>
     <ion-title>Matchmaking</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only (click)="addPlayer()"><ion-icon name="add"></ion-icon></button>
-    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -35,5 +32,8 @@
             </button>
         </ion-item-options>
       </ion-item-sliding>
+      <button ion-button (click)="addPlayer()">+ Add Player</button>
   </ion-list>
+  <hr>
+  <button ion-button color="secondary">Randomize Teams</button>
 </ion-content>
