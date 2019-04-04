@@ -14,9 +14,10 @@ import { FriendsPage } from "../pages/friends/friends";
 import { HomePage } from '../pages/home/home';
 import { MapPage } from '../pages/map/map';
 import { LoginPage } from '../pages/login/login';
+import { SignUpPage } from '../pages/sign-up/sign-up';
 import { CognitoServiceProvider } from '../providers/cognito-service/cognito-service';
 import { SystemVariableProvider } from '../providers/system-variable/system-variable';
-import { SignUpPage } from '../pages/sign-up/sign-up';
+
 
 @NgModule({
   declarations: [
@@ -44,10 +45,10 @@ import { SignUpPage } from '../pages/sign-up/sign-up';
   providers: [
     StatusBar,
     SplashScreen,
-    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CognitoServiceProvider,
-    SystemVariableProvider
+    SystemVariableProvider,
+    Geolocation,
   ]
 })
 export class AppModule {}
