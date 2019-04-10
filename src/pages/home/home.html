@@ -1,0 +1,71 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sport Vision</ion-title>
+  </ion-navbar>
+
+    <ion-title>
+      Home
+    </ion-title>
+
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content slot="middle">
+    <ion-list>
+  <ion-item>
+    <ion-label>
+      <ion-icon name="star" slot="start"></ion-icon>
+      &nbsp;Favorite Location #1
+    </ion-label>
+  </ion-item>
+
+    <ion-item>
+    <ion-label>
+      <ion-icon name="star" slot="start"></ion-icon>
+      &nbsp;Favorite Location #2
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <ion-icon name="star" slot="start"></ion-icon>
+      &nbsp;Favorite Location #3
+    </ion-label>
+  </ion-item>
+</ion-list>
+</ion-card-content>
+  </ion-card>
+
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-footer>
+   <ion-card-content slot="bottom">
+   <!-- <ion-tab-bar slot="bottom" role="tablist"> -->
+     <button ion-button (click)="goTo('friends')">
+      <ion-icon name="people"></ion-icon>
+      <ion-label>&nbsp; Friends</ion-label>
+     </button>
+
+     <button ion-button (click)="goTo('forum')">
+      <ion-icon name="paper"></ion-icon>
+      <ion-label>&nbsp; Forums</ion-label>
+     </button>
+
+     <button ion-button (click)="goTo('map')">
+       <ion-icon name="search"></ion-icon>
+       &nbsp;Discover Locations
+     </button>
+
+     <button ion-button (click)="goTo('friends')">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>&nbsp; Profile</ion-label>
+     </button>
+    <!-- </ion-tab-bar> -->
+   </ion-card-content>
+   </ion-footer>
+</ion-card>
+</ion-content>
