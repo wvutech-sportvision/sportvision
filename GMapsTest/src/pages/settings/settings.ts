@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AboutPage } from '../about/about';
+import { ContactPage } from '../contact/contact';
 
 /**
  * Generated class for the SettingsPage page.
@@ -16,6 +18,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class SettingsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  about(event, item) {
+    this.navCtrl.push(AboutPage);
+  }
+
+  contact(event, item) {
+    this.navCtrl.push(ContactPage);
   }
 
   ionViewDidLoad() {

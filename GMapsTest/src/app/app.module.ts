@@ -19,6 +19,8 @@ import { SystemVariableProvider } from '../providers/system-variable/system-vari
 import { MatchmakingPage } from '../pages/matchmaking/matchmaking';
 import { ProfilePage } from '../pages/profile/profile';
 import { SettingsPage } from '../pages/settings/settings';
+import { AboutPage } from '../pages/about/about';
+import { ContactPage } from '../pages/contact/contact';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { SettingsPage } from '../pages/settings/settings';
     MapPage,
     MatchmakingPage,
     ProfilePage,
-    SettingsPage
+    SettingsPage,
+    AboutPage,
+    ContactPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,9 @@ import { SettingsPage } from '../pages/settings/settings';
     MapPage,
     ProfilePage,
     MatchmakingPage,
-    SettingsPage
+    SettingsPage,
+    AboutPage,
+    ContactPage
   ],
   providers: [
     StatusBar,
