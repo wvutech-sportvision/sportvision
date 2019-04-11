@@ -15,6 +15,7 @@ import { HomePage } from '../pages/home/home';
 import { MapPage } from '../pages/map/map';
 import { LoginPage } from '../pages/login/login';
 import { SignUpPage } from '../pages/sign-up/sign-up';
+import { ForumPage } from '../pages/forum/forum';
 import { CognitoServiceProvider } from '../providers/cognito-service/cognito-service';
 import { SystemVariableProvider } from '../providers/system-variable/system-variable';
 
@@ -28,6 +29,7 @@ import { SystemVariableProvider } from '../providers/system-variable/system-vari
     FriendsPage,
     MapPage,
     SignUpPage,
+    ForumPage
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,7 @@ import { SystemVariableProvider } from '../providers/system-variable/system-vari
     FriendsPage,
     MapPage,
     SignUpPage,
+    ForumPage
   ],
   providers: [
     StatusBar,

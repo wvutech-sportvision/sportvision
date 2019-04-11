@@ -36,7 +36,7 @@ export class MapPage {
         let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
         let mapOptions = {
-          center: latLng,
+          center: latLng, //Centers at the lat and lng of position, position points at the users currentPosition
           zoom: 15,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
@@ -46,6 +46,14 @@ export class MapPage {
       }, (err) => {
         console.log(err);
       });
+      //
+      // // Create a <script> tag and set the USGS URL as the source.
+      //       var script = document.createElement('script');
+      //       // This example uses a local copy of the GeoJSON stored at
+      //       // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
+      //       script.src = 'src="https://www.google.com/maps/embed/v1/search?q=basketball&key=AIzaSyCD6JmpSdOHo6iz0CHb0i0t61aHFT8YpWI"';
+      //       document.getElementsByTagName('head')[0].appendChild(script);
+      //     }
 
     }
 

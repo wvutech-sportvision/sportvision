@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MapPage } from "../map/map";
+import { HomePage } from "../home/home";
 /**
  * Generated class for the FriendsPage page.
  *
@@ -22,6 +23,9 @@ export class FriendsPage {
     goTo(page) {
       if(page === 'map') {
         this.navCtrl.push(MapPage);
+      }
+      else if (page === 'home') {
+        this.navCtrl.push(HomePage);
       }
     }
 
