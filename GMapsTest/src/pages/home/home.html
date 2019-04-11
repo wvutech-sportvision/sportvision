@@ -1,19 +1,24 @@
 <ion-header>
+  <ion-navbar>
     <ion-title>
-      Sports Vision\n
+      Sport Vision
     </ion-title>
+  </ion-navbar>
 </ion-header>
-
 <ion-content padding>
   <ion-card>
    <ion-card-header>
      Home Page
    </ion-card-header>
-   <ion-card-content slot="bottom">
-   <!-- <ion-tab-bar slot="bottom" role="tablist"> -->
-     <button ion-button (click)="goTo('friends')">Friends</button>
+   
+   <ion-footer>
+   <!-- <ion-card-content> -->
+  <div class="button-bar">
+     <button ion-button slot="secondary" (click)="goTo('friends')">Friends</button>
      <button ion-button color="secondary" (click)="goTo('map')">Discover</button>
-    <!-- </ion-tab-bar> -->
-   </ion-card-content>
+     <button ion-button (click)="goTo('forum')">Forum</button>
+    </div>
+   <!-- </ion-card-content> -->
+   </ion-footer>
 </ion-card>
 </ion-content>
