@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { reorderArray } from 'ionic-angular';
+import { Pipe, PipeTransform } from '@angular/core';
+
 
 /**
  * Generated class for the MatchmakingPage page.
@@ -13,15 +16,16 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
   selector: 'page-matchmaking',
   templateUrl: 'matchmaking.html',
 })
+
 export class MatchmakingPage {
 
-  players: any = [];
+  team1: any = [];
+  team2: any = [];
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
   }
 
-  addPlayer(){
-
+  addPlayer1(){
     let prompt = this.alertCtrl.create({
         title: 'Add Player',
         inputs: [{
@@ -34,7 +38,7 @@ export class MatchmakingPage {
             {
                 text: 'Add',
                 handler: data => {
-                    this.players.push(data);
+                    this.team1.push(data);
                 }
             }
         ]
@@ -43,8 +47,29 @@ export class MatchmakingPage {
     prompt.present();
 }
 
-editPlayer(player){
+addPlayer2(){
+    let prompt = this.alertCtrl.create({
+        title: 'Add Player',
+        inputs: [{
+            name: 'title'
+        }],
+        buttons: [
+            {
+                text: 'Cancel'
+            },
+            {
+                text: 'Add',
+                handler: data => {
+                    this.team2.push(data);
+                }
+            }
+        ]
+    });
 
+    prompt.present();
+}
+
+editPlayer1(player){
     let prompt = this.alertCtrl.create({
         title: 'Edit Player',
         inputs: [{
@@ -57,26 +82,58 @@ editPlayer(player){
             {
                 text: 'Save',
                 handler: data => {
-                    let index = this.players.indexOf(player);
+                    let index = this.team1.indexOf(player);
 
                     if(index > -1){
-                      this.players[index] = data;
+                      this.team1[index] = data;
                     }
                 }
             }
         ]
     });
-
     prompt.present();       
+}
 
+editPlayer2(player){
+    let prompt = this.alertCtrl.create({
+        title: 'Edit Player',
+        inputs: [{
+            name: 'title'
+        }],
+        buttons: [
+            {
+                text: 'Cancel'
+            },
+            {
+                text: 'Save',
+                handler: data => {
+                    let index = this.team2.indexOf(player);
+
+                    if(index > -1){
+                      this.team2[index] = data;
+                    }
+                }
+            }
+        ]
+    });
+    prompt.present();       
 }
 
 deletePlayer(player){
 
-    let index = this.players.indexOf(player);
+    let index = this.team1.indexOf(player);
 
     if(index > -1){
-        this.players.splice(index, 1);
+        this.team1.splice(index, 1);
+    }
+}
+
+deletePlayer2(player){
+
+    let index = this.team2.indexOf(player);
+
+    if(index > -1){
+        this.team2.splice(index, 1);
     }
 }
 

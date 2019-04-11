@@ -8,6 +8,10 @@
 
   <ion-navbar>
     <ion-title>Matchmaking</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="addPlayer1()">+ Team 1</button>
+      <button ion-button (click)="addPlayer2()">+ Team 2</button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -15,25 +19,42 @@
 
 <ion-content padding>
   <ion-list>
-    <label class="item item-divider">
-      <h2>Players:</h2>
-    </label>
-    <ion-item-sliding *ngFor="let player of players">
+    <ion-list-header><ion-label>Team 1:</ion-label></ion-list-header>
+    <ion-item-group reorder="true" (ionItemReorder)="$event.applyTo(team1)">
+        <ion-item-sliding *ngFor="let player of team1">
         <ion-item center text-center>
             {{player.title}}
         </ion-item>
 
         <ion-item-options >
-            <button ion-button icon-only (click)="editPlayer(player)">
+            <button ion-button icon-only (click)="editPlayer1(player)">
                 <ion-icon name="create"></ion-icon>
             </button>
-            <button ion-button icon-only (click)="deletePlayer(player)" color="danger">
+            <button ion-button icon-only (click)="deletePlayer1(player)" color="danger">
                 <ion-icon name="trash"></ion-icon>
             </button>
         </ion-item-options>
-      </ion-item-sliding>
-      <button ion-button (click)="addPlayer()">+ Add Player</button>
+      </ion-item-sliding>        
+    </ion-item-group>
+
+    <ion-list-header><ion-label>Team 2:</ion-label></ion-list-header>
+    <ion-item-group reorder="true" (ionItemReorder)="$event.applyTo(team2)">
+        <ion-item-sliding *ngFor="let player of team2">
+        <ion-item center text-center>
+            {{player.title}}
+        </ion-item>
+
+        <ion-item-options >
+            <button ion-button icon-only (click)="editPlayer2(player)">
+                <ion-icon name="create"></ion-icon>
+            </button>
+            <button ion-button icon-only (click)="deletePlayer2(player)" color="danger">
+                <ion-icon name="trash"></ion-icon>
+            </button>
+        </ion-item-options>
+      </ion-item-sliding>        
+    </ion-item-group>
   </ion-list>
   <hr>
-  <button ion-button color="secondary">Randomize Teams</button>
+  <button ion-button block  color="secondary" (click)="makeTeams()">Mix Teams</button>
 </ion-content>

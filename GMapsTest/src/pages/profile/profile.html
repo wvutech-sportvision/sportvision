@@ -8,6 +8,11 @@
 
   <ion-navbar>
     <ion-title>Profile</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="settings()">
+          <ion-icon name="settings"></ion-icon>
+        </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -17,7 +22,7 @@
   <div align="center" *ngIf="formCtrl.form.valid">
     <h1>Profile</h1>
     <img class="profile-image" src="assets/imgs/logo.png">
-      <h4>{{person.name}}, {{person.position}}</h4>
+      <h4>{{person.name}}, {{person.sport}}</h4>
       <h5>{{age}} years old</h5>
       <h6>{{person.aboutMe}}</h6>
   </div>
@@ -29,13 +34,13 @@
     </ion-item>
 
     <ion-item>
-      <ion-label>Favorite Position</ion-label>
-      <ion-select [(ngModel)]="person.position" name="position" required>
-        <ion-option value="Shooting Guard">Shooting Guard</ion-option>
-        <ion-option value="Point Guard">Point Guard</ion-option>
-        <ion-option value="Center">Center</ion-option>
-        <ion-option value="Power Forward">Power Forward</ion-option>
-        <ion-option value="Small Forward">Small Forward</ion-option>
+      <ion-label>Favorite Sport</ion-label>
+      <ion-select [(ngModel)]="person.sport" name="sport" required>
+        <ion-option value="Soccer">Soccer</ion-option>
+        <ion-option value="Basketball">Basketball</ion-option>
+        <ion-option value="Football">Football</ion-option>
+        <ion-option value="Baseball">Baseball</ion-option>
+        <ion-option value="Tennis">Tennis</ion-option>
       </ion-select>
     </ion-item>
 

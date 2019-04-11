@@ -18,6 +18,7 @@ import { CognitoServiceProvider } from '../providers/cognito-service/cognito-ser
 import { SystemVariableProvider } from '../providers/system-variable/system-variable';
 import { MatchmakingPage } from '../pages/matchmaking/matchmaking';
 import { ProfilePage } from '../pages/profile/profile';
+import { SettingsPage } from '../pages/settings/settings';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProfilePage } from '../pages/profile/profile';
     FriendsPage,
     MapPage,
     MatchmakingPage,
-    ProfilePage
+    ProfilePage,
+    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { ProfilePage } from '../pages/profile/profile';
     FriendsPage,
     MapPage,
     ProfilePage,
-    MatchmakingPage
+    MatchmakingPage,
+    SettingsPage
   ],
   providers: [
     StatusBar,
