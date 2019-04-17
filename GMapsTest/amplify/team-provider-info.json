@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "gmapstest-20190417184714-authRole",
+            "UnauthRoleArn": "arn:aws:iam::676453364535:role/gmapstest-20190417184714-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::676453364535:role/gmapstest-20190417184714-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "gmapstest-20190417184714-deployment",
+            "UnauthRoleName": "gmapstest-20190417184714-unauthRole",
+            "StackName": "gmapstest-20190417184714",
+            "StackId": "arn:aws:cloudformation:us-east-1:676453364535:stack/gmapstest-20190417184714/bf4f5f10-6162-11e9-b8a4-0a9fca2e6786"
+        }
+    }
+}
