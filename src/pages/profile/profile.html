@@ -1,0 +1,61 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Profile</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="settings()">
+          <ion-icon name="settings"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <form #formCtrl="ngForm">
+  <div align="center" *ngIf="formCtrl.form.valid">
+    <h1>Profile</h1>
+    <img class="profile-image" src="assets/imgs/logo.png">
+      <h4>{{person.name}}, {{person.sport}}</h4>
+      <h5>{{age}} years old</h5>
+      <h6>{{person.aboutMe}}</h6>
+  </div>
+
+  <ion-list >
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="person.name" name="name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Favorite Sport</ion-label>
+      <ion-select [(ngModel)]="person.sport" name="sport" required>
+        <ion-option value="Soccer">Soccer</ion-option>
+        <ion-option value="Basketball">Basketball</ion-option>
+        <ion-option value="Football">Football</ion-option>
+        <ion-option value="Baseball">Baseball</ion-option>
+        <ion-option value="Tennis">Tennis</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Birth Date</ion-label>
+        <ion-datetime required name="birthdate" displayFormat="DD MMM YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="dob" [ngModelOptions]="{standalone:true}"></ion-datetime>
+    </ion-item>
+    
+    <ion-item>
+        <ion-label floating>About Me</ion-label>
+        <ion-input type="text" [(ngModel)]="person.aboutMe" name="aboutMe" required></ion-input>
+    </ion-item>
+  </ion-list>
+  <hr>
+  <button color="secondary" [disabled]="!formCtrl.form.valid" ion-button block (click)="save()">Save</button>
+  <button color="danger" ion-button block (click)="reset()">Reset</button>
+</form>
+</ion-content>

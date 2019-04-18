@@ -1,16 +1,21 @@
 <ion-header>
-
-  <ion-navbar>
+  <ion-toolbar>
     <ion-title>Sport Vision</ion-title>
-  </ion-navbar>
+  </ion-toolbar>
 
+  <ion-toolbar>
+    <button ion-button (click)="goTo('map')">
+      <ion-icon name="checkmark"></ion-icon>
+      &nbsp;Check In
+    </button>
+  </ion-toolbar>
     <ion-title>
       Home
     </ion-title>
-
 </ion-header>
 
-<ion-content>
+
+
   <ion-card>
     <ion-card-content slot="middle">
     <ion-list>
@@ -50,6 +55,11 @@
       <ion-label>&nbsp; Friends</ion-label>
      </button>
 
+     <button ion-button (click)="goTo('matchmaking')">
+       <ion-icon name="basketball"></ion-icon>
+       <ion-label>&nbsp; Matchmaking</ion-label>
+     </button>
+
      <button ion-button (click)="goTo('forum')">
       <ion-icon name="paper"></ion-icon>
       <ion-label>&nbsp; Forums</ion-label>
@@ -60,10 +70,12 @@
        &nbsp;Discover Locations
      </button>
 
-     <button ion-button (click)="goTo('friends')">
+     <button ion-button (click)="goTo('profile')">
       <ion-icon name="person"></ion-icon>
       <ion-label>&nbsp; Profile</ion-label>
      </button>
+
+
     <!-- </ion-tab-bar> -->
    </ion-card-content>
    </ion-footer>

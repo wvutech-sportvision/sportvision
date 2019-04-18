@@ -18,6 +18,14 @@ import { ForumPage} from '../pages/forum/forum';
 import { CognitoServiceProvider } from '../providers/cognito-service/cognito-service';
 import { SystemVariableProvider } from '../providers/system-variable/system-variable';
 
+import { MatchmakingPage } from '../pages/matchmaking/matchmaking';
+import { ProfilePage } from '../pages/profile/profile';
+import { SettingsPage } from '../pages/settings/settings';
+import { AboutPage } from '../pages/about/about';
+import { ContactPage } from '../pages/contact/contact';
+
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -27,6 +35,11 @@ import { SystemVariableProvider } from '../providers/system-variable/system-vari
     FriendsPage,
     ForumPage,
     MapPage,
+    MatchmakingPage,
+    ProfilePage,
+    SettingsPage,
+    AboutPage,
+    ContactPage
   ],
   imports: [
     BrowserModule,
@@ -40,6 +53,11 @@ import { SystemVariableProvider } from '../providers/system-variable/system-vari
     FriendsPage,
     MapPage,
     ForumPage,
+    ProfilePage,
+    MatchmakingPage,
+    SettingsPage,
+    AboutPage,
+    ContactPage
   ],
   providers: [
     StatusBar,

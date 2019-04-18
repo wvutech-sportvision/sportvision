@@ -1,6 +1,9 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FriendsPage } from "../friends/friends";
+//import { MapPage } from "../map/map";
+import { HomePage } from "../home/home";
+import { ForumPage } from "../forum/forum";
 
 declare var google;
 
@@ -61,18 +64,20 @@ addInfoWindow(marker, content){
     });
 
   }
-
   goTo(page) {
-  if(page === 'friends') {
-    this.navCtrl.push(FriendsPage);
+    if(page === 'home') {
+      this.navCtrl.push(HomePage);
+    } else if(page === 'forum'){
+      this.navCtrl.push(ForumPage);
+    } else if(page === 'friends'){
+      this.navCtrl.push(FriendsPage);
+    } else if(page === 'profile'){
+      this.navCtrl.push(FriendsPage);
+    } else if(page === 'matchmaking'){
+      this.navCtrl.push(MatchmakingPage);
+    }
   }
-}
 
-back() {
-  if(this.navCtrl.length() >= 2) {
-    this.navCtrl.pop();
-  }
-}
 
 
 }
