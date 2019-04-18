@@ -119,7 +119,7 @@ editPlayer2(player){
     prompt.present();       
 }
 
-deletePlayer(player){
+deletePlayer1(player){
 
     let index = this.team1.indexOf(player);
 
@@ -140,5 +140,4 @@ deletePlayer2(player){
   ionViewDidLoad() {
     console.log('ionViewDidLoad MatchmakingPage');
   }
-
 }

@@ -14,17 +14,15 @@
         </button>
     </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
 <ion-content padding>
   <form #formCtrl="ngForm">
   <div align="center" *ngIf="formCtrl.form.valid">
-    <h1>Profile</h1>
-    <img class="profile-image" src="assets/imgs/logo.png">
-      <h4>{{person.name}}, {{person.sport}}</h4>
-      <h5>{{age}} years old</h5>
-      <h6>{{person.aboutMe}}</h6>
+    <img class="profile-image" src="assets/imgs/person">
+    <h4>{{person.name}}, {{person.sport}}</h4>
+    <h5>{{age}} years old</h5>
+    <h6>{{person.aboutMe}}</h6>
   </div>
 
   <ion-list >
