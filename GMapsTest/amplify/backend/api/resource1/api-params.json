@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "category1",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "resource1",
+    "apiName": "resource1",
+    "functionArns": [
+        {
+            "lambdaFunction": "category1"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "gmapstest-20190417184714-authRole",
+        "unAuthRoleName": "gmapstest-20190417184714-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "category1",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

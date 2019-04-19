@@ -21,9 +21,6 @@ export class MapPage {
   constructor(private geolocation: Geolocation, public navCtrl: NavController) {
   }
 
-  // ionViewDidLoad(){
-  //   this.loadMap();
-  // }
 
   ionViewDidLoad(){
       this.loadMap();
