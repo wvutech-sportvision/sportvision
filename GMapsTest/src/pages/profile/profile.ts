@@ -16,12 +16,12 @@ import { SettingsPage } from '../settings/settings';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
-  public person: {name: string, sport: string, birthdate?: number, aboutMe: string};
+  public person: {name: string, position: string, birthdate?: number, aboutMe: string};
   dob: any;
   age: any;
   showProfile: boolean;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.person = {name: undefined, sport: undefined, birthdate: undefined, aboutMe: undefined};
+    this.person = {name: undefined, position: undefined, birthdate: undefined, aboutMe: undefined};
     this.dob = undefined;
   }
 
@@ -40,7 +40,7 @@ export class ProfilePage {
 
   
   reset(){
-    this.person = {name: null, sport: null, birthdate: null, aboutMe: null,};
+    this.person = {name: null, position: null, birthdate: null, aboutMe: null,};
     this.dob = null;
     this.showProfile = false;
   }
