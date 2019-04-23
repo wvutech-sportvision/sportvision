@@ -11,8 +11,8 @@
 </ion-header>
 
 <ion-content padding>
-    <button ion-button block color="dark">Notification Settings</button><br>
-    <button ion-button block color="dark">Location Settings</button><br>
+    <button ion-button block color="dark" (click)="open('notification_id')">Notification Settings</button><br>
+    <button ion-button block color="dark" (click)="open('location')">Location Settings</button><br>
     <button ion-button block color="danger">Blocked Users</button><br>
     <button ion-button block color="danger">Report User</button><br>
     <button ion-button block color="secondary" (click)="contact()">Contact Us</button><br>

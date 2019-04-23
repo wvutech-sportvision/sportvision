@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 import { Geolocation } from '@ionic-native/geolocation';
 
 import { GoogleMapComponent } from '../components/google-map/google-map';
+import { OpenNativeSettings } from '@ionic-native/open-native-settings';
 
 import { FriendsPage } from "../pages/friends/friends";
 import { HomePage } from '../pages/home/home';

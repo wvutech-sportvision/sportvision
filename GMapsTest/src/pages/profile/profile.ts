@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SettingsPage } from '../settings/settings';
+import { FriendsPage } from '../friends/friends';
 
 
 /**
@@ -27,6 +28,10 @@ export class ProfilePage {
 
   settings(event, item) {
     this.navCtrl.push(SettingsPage);
+  }
+
+  friends(event, item) {
+    this.navCtrl.push(FriendsPage);
   }
 
   ionViewDidLoad() {

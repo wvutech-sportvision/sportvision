@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { reorderArray } from 'ionic-angular';
-import { Pipe, PipeTransform } from '@angular/core';
+ import { Pipe, PipeTransform } from '@angular/core';
 
 
 /**

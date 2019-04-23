@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
-
+import { OpenNativeSettings } from '@ionic-native/open-native-settings';
 /**
  * Generated class for the SettingsPage page.
  *
@@ -17,7 +17,15 @@ import { ContactPage } from '../contact/contact';
 })
 export class SettingsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private openNativeSettings: OpenNativeSettings) {
+  }
+
+  open(setting: string) {
+    this.openNativeSettings.open(setting).then(val => {
+      alert(setting);
+    }).catch(err=>{
+      alert(JSON.stringify(err));
+    })
   }
 
   about(event, item) {
