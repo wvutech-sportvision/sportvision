@@ -21,6 +21,10 @@ import { MatchmakingPage } from '../pages/matchmaking/matchmaking';
 import { ProfilePage } from '../pages/profile/profile';
 import { SettingsPage } from '../pages/settings/settings';
 import { AboutPage } from '../pages/about/about';
+import { ForumPage } from '../pages/forum/forum';
+import { ForumHomePage } from '../pages/forum-home/forum-home';
+import { AddRoomPage } from '../pages/add-room/add-room';
+import { RoomPage } from '../pages/room/room';
 import { ContactPage } from '../pages/contact/contact';
 
 @NgModule({
@@ -35,6 +39,10 @@ import { ContactPage } from '../pages/contact/contact';
     ProfilePage,
     SettingsPage,
     AboutPage,
+    ForumPage,
+    ForumHomePage,
+    AddRoomPage,
+    RoomPage,
     ContactPage
   ],
   imports: [
@@ -52,6 +60,10 @@ import { ContactPage } from '../pages/contact/contact';
     MatchmakingPage,
     SettingsPage,
     AboutPage,
+    ForumPage,
+    ForumHomePage,
+    AddRoomPage,
+    RoomPage,
     ContactPage
   ],
   providers: [
