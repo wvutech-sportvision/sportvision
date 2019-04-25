@@ -6,14 +6,21 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Forum
-    </ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only (click)="exitChat()">
-        <ion-icon name="exit"></ion-icon>
-      </button>
-    </ion-buttons>
+    <ion-toolbar>
+      <ion-buttons left>
+        <button ion-button icon-only (click)="home()">
+            <ion-icon name="arrow-back"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>
+        Forum
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="exitChat()">
+          <ion-icon name="exit"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
   </ion-navbar>
 </ion-header>
 
@@ -50,8 +57,10 @@
       <ion-col col-10>
         <ion-input type="text" placeholder="Type a message" [(ngModel)]="data.message" name="message"></ion-input>
       </ion-col>
-      <ion-col col-2 (click)="sendMessage()">
-        <ion-icon name="paper-plane"></ion-icon>
+      <ion-col align-self-right col-2 (click)="sendMessage()">
+        <button ion-button round>
+          <ion-icon name="send"></ion-icon>
+        </button>
       </ion-col>
     </ion-row>
   </ion-grid>

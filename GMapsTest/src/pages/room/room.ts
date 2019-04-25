@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ForumHomePage } from '../forum-home/forum-home';
 import { AddRoomPage } from '../add-room/add-room';
 import * as firebase from 'Firebase';
+import { HomePage } from '../home/home';
 
 
 /**
@@ -29,17 +30,25 @@ export class RoomPage {
     });
   }
 
-
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad RoomPage');
   }
   
+  home(){
+    this.navCtrl.push(HomePage);
+  }
+
   addRoom(){
     this.navCtrl.push(AddRoomPage);
   }
-}
 
+  joinRoom(key){
+    this.navCtrl.setRoot(ForumHomePage, {
+      key:key,
+      nickname:this.navParams.get("nickname")
+    });
+  }
+}
 
 export const snapshotToArray = snapshot => {
   let returnArr = [];
@@ -49,6 +58,5 @@ export const snapshotToArray = snapshot => {
       item.key = childSnapshot.key;
       returnArr.push(item);
   });
-
   return returnArr;
 };

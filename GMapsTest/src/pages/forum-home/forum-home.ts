@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
 import { RoomPage } from '../room/room';
+import { HomePage } from '../home/home';
+
 import * as firebase from 'Firebase';
 
 /**
@@ -47,6 +49,10 @@ export class ForumHomePage {
         }
       }, 1000);
     });
+  }
+
+  home(){
+    this.navCtrl.push(HomePage);
   }
 
   sendMessage() {

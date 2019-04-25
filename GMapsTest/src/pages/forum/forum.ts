@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RoomPage } from  '../room/room';
+import { database } from 'firebase';
 
 
 /**
@@ -21,15 +22,14 @@ export class ForumPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
-  enterNickname() {
-    this.navCtrl.setRoot(RoomPage, {
-      nickname: this.data.nickname
-    });
-  }
   
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ForumPage');
+  enterNickname() {
+      this.navCtrl.setRoot(RoomPage, {
+        nickname: this.data.nickname
+      });
   }
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ForumPage'); 
+  }
 }
