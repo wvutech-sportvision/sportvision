@@ -1,0 +1,65 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sport Vision</ion-title>
+  </ion-navbar>
+
+    <ion-title>
+      Forum
+    </ion-title>
+
+</ion-header>
+
+
+
+<ion-content padding>
+
+
+  <ion-card>
+    <ion-item>
+      <ion-label>Notes</ion-label>
+      <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+    </ion-item>
+    <ion-buttons end>
+    <button ion-button icon only>
+      <ion-icon name="send"></ion-icon>
+      <ion-label></ion-label>
+    </button>
+    </ion-buttons>
+</ion-card>
+
+
+  <ion-card>
+    <ion-footer>
+   <ion-card-content slot="bottom">
+   <!-- <ion-tab-bar slot="bottom" role="tablist"> -->
+     <button ion-button (click)="goTo('friends')">
+      <ion-icon name="people"></ion-icon>
+      <ion-label>&nbsp; Friends</ion-label>
+     </button>
+
+     <button ion-button (click)="goTo('home')">
+      <ion-icon name="home"></ion-icon>
+      <ion-label>&nbsp; Home</ion-label>
+     </button>
+
+     <button ion-button (click)="goTo('matchmaking')">
+       <ion-icon name="basketball"></ion-icon>
+       <ion-label>&nbsp; Matchmaking</ion-label>
+     </button>
+
+     <button ion-button (click)="goTo('map')">
+       <ion-icon name="search"></ion-icon>
+       &nbsp;Discover Locations
+     </button>
+
+     <button ion-button (click)="goTo('friends')">
+      <ion-icon name="person"></ion-icon>
+      <ion-label>&nbsp; Profile</ion-label>
+     </button>
+    <!-- </ion-tab-bar> -->
+   </ion-card-content>
+   </ion-footer>
+</ion-card>
+</ion-content>

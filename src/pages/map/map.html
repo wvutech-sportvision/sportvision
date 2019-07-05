@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Map
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div #map id="map"></div>
+
+  <ion-footer>
+ <ion-card-content slot="bottom">
+ <!-- <ion-tab-bar slot="bottom" role="tablist"> -->
+   <button ion-button (click)="goTo('friends')">
+    <ion-icon name="people"></ion-icon>
+    <ion-label>&nbsp; Friends</ion-label>
+   </button>
+
+   <button ion-button (click)="goTo('forum')">
+    <ion-icon name="paper"></ion-icon>
+    <ion-label>&nbsp; Forums</ion-label>
+   </button>
+
+   <button ion-button (click)="goTo('matchmaking')">
+     <ion-icon name="basketball"></ion-icon>
+     <ion-label>&nbsp; Matchmaking</ion-label>
+   </button>
+
+   <button ion-button (click)="goTo('home')">
+     <ion-icon name="home"></ion-icon>
+     &nbsp;Home
+   </button>
+
+   <button ion-button (click)="goTo('friends')">
+    <ion-icon name="person"></ion-icon>
+    <ion-label>&nbsp; Profile</ion-label>
+   </button>
+  <!-- </ion-tab-bar> -->
+ </ion-card-content>
+ </ion-footer>
+</ion-content>
